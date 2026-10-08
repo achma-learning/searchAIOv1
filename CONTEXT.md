@@ -1,5 +1,5 @@
 # Thesis Evidence Workspace (searchAIOv1) — AI Context File
-_Last synced: 2026-10-08 @ 9109443 (+ README rewrite on branch `claude/affectionate-allen-8bix9f`)_
+_Last synced: 2026-10-08 @ ddab706 (+ LICENSE on branch `claude/affectionate-allen-8bix9f`)_
 
 ## 1. What This Is (Plain English)
 - **In one sentence:** a one-page website where a medical student types a topic, gets real research papers back, saves the useful ones with personal notes, and exports them as a reference list.
@@ -68,6 +68,7 @@ What a visitor can actually do (`src/pages/Index.tsx`):
 - **New routes:** add them above the `*` catch-all in `src/App.tsx` (comment in the file says so). Keep using `<BrowserRouter>` exactly like that — the Pages build looks for that literal tag.
 - **User data stays in the browser.** Saved papers/notes use localStorage key `thesis-evidence-saved-v1`. Changing the shape of `SavedPaper` without a migration silently wipes or breaks people's lists.
 - **Not medical advice.** The footer says so; keep that framing in any new copy.
+- **License is PolyForm Noncommercial 1.0.0** (`LICENSE`), which is non-commercial only. Don't add MIT/Apache-licensed claims anywhere, and don't paste in code whose license forbids that. `package.json` has no `license` field because Chantan owns that file.
 - **Don't add a lockfile** unless you also stop syncing from Chantan.
 
 ## 6. Fragile Bits & Landmines
