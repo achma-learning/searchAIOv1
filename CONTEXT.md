@@ -1,5 +1,5 @@
 # Thesis Evidence Workspace (searchAIOv1) — AI Context File
-_Last synced: 2026-10-08 @ 464664d (+ GitHub Pages setup on branch `claude/affectionate-allen-8bix9f`)_
+_Last synced: 2026-10-08 @ 9109443 (+ README rewrite on branch `claude/affectionate-allen-8bix9f`)_
 
 ## 1. What This Is (Plain English)
 - **In one sentence:** a one-page website where a medical student types a topic, gets real research papers back, saves the useful ones with personal notes, and exports them as a reference list.
@@ -84,14 +84,14 @@ What a visitor can actually do (`src/pages/Index.tsx`):
 - **Search errors** fall back to showing PubMed / Scholar / Cochrane / CISMeF links (`sourceLinks`). Europe PMC is called with `pageSize=25` and no pagination — you only ever get the first 25 hits.
 - **`normalizePaper` uses `any`** for the Europe PMC record. Field names (`authorString`, `pubYear`, `pubTypeList`, `isOpenAccess`) come straight from Europe PMC's `resultType=core` JSON; check their docs before renaming.
 - **Filters only apply to the 25 already-fetched results**, not to the API query. "0 match" often just means the filter hid them.
-- **README conflicts with reality:** it calls the repo `my-chantan-app (private)` and says "Live site: not published yet", while also linking a live URL. The repo is actually `achma-learning/searchAIOv1`. README is Chantan-generated, so fixing it here won't stick.
+- **README.md may get overwritten by Chantan.** It's in `.chantan/pushed-files.json`. The old Chantan footer said Chantan regenerates it on every push unless you ask Chantan (in its chat) to add a `README.md` to the project, which makes it use yours instead. The README is now hand-written (live links, screenshot `docs/preview.png`). If it suddenly reverts to the "Built with Chantan" template, that's why. Restore it from git history.
 - **Large bundle warning (~515 kB JS)** during build — expected, comes from the preinstalled libraries. Not an error.
 
 ## 7. Current State
-- **Last shipped:** GitHub Pages deployment — workflow, Pages-specific Vite config, and the `tsc` type stub. Verified locally: under `/searchAIOv1/` the page loads, all images resolve, and a live Europe PMC search returns 25 results with no 404s.
-- **Working on now:** turning on Pages in repo settings (Source = GitHub Actions) and merging to `main` for the first deploy.
+- **Last shipped:** GitHub Pages deployment ([achma-learning/searchAIOv1#1](https://github.com/achma-learning/searchAIOv1/pull/1)). It's live at https://achma-learning.github.io/searchAIOv1/: the page loads, images resolve, and search returns results. Also shipped: a human-facing README with a real screenshot (`docs/preview.png`, taken from the live site).
+- **Working on now:** _Not yet figured out_.
 - **Next up:**
-  1. Decide whether GitHub Pages or Chantan's `.chantan.one` URL is the "real" public address.
+  1. Tell Chantan to keep the hand-written README, so a sync doesn't overwrite it (see §6).
   2. _Not yet figured out_ — the "AI research agent" mentioned as a roadmap item in `ResearchGuide.tsx` has no code yet.
 
 ## 8. Update Protocol (Verbatim)
