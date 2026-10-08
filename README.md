@@ -62,7 +62,7 @@ Finding papers for a medical thesis usually means juggling PubMed tabs, a notes 
 
 ## License
 
-No license file yet. Until one is added, default copyright applies, so ask before reusing the code.
+[PolyForm Noncommercial 1.0.0](./LICENSE). Free to use, copy and change for learning, teaching, research and other non-commercial purposes. Schools, universities and public health organizations are explicitly covered. **Selling it or using it commercially is not allowed.** If you share a copy, include the `LICENSE` file.
 
 ## See also
 
